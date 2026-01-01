@@ -8298,7 +8298,7 @@
         <description>Installs the full DF95/IFLS toolbar suite payload (scripts + menus + toolbars + assets). After install, run DF95 OneClick Setup (IFLS Main).</description>
       </metadata>
       <version name="1.0.4" time="2025-12-30T00:00:00Z">
-        <source>https://raw.githubusercontent.com/IfeelLikeSnow/df95-toolbar-suite/main/_payload/Packages/DF95_IFLS_CoreAssets.lua</source>
+        <source>https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/_payload/Packages/DF95_IFLS_CoreAssets.lua</source>
       </version>
     </reapack>
   </category>
