@@ -57,10 +57,10 @@ local buttons = {
   {label="IFLS Artist Hub",         script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua"},
   {label="IFLS SampleGalaxy",       script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua"},
   {label="IFLS Groove & Rhythm",    script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua"},
-  {label="IFLS Macros & Scenes",    script_rel="IFLS/IFLS/Hubs/IFLS_SceneHub_ImGui.lua"},
-  {label="IFLS FX Brain",           script_rel="IFLS/IFLS/Hubs/IFLS_MasterHub_ImGui.lua"},
-  {label="IFLS Diagnostics / Inspector", script_rel="IFLS/DF95/DF95_Diagnostics_Insight_Run.lua"},
-  {label="IFLS Dev / Debug",        script_rel="IFLS/IFLS/Domain/IFLS_Diagnostics_DebugDemo.lua"},
+  {label="IFLS Macros & Scenes",    script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua"},
+  {label="IFLS FX Brain",           script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua"},
+  {label="IFLS Diagnostics / Inspector", script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua"},
+  {label="IFLS Dev / Debug",        script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua"},
 }
 
 reaper.ClearConsole()

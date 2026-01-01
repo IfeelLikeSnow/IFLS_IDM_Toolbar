@@ -20,7 +20,7 @@ local r = reaper
 local function df95_root()
   local sep = package.config:sub(1,1)
   local res = r.GetResourcePath()
-  return (res .. sep .. "Scripts" .. sep .. "IfeelLikeSnow" .. sep .. "DF95" .. sep):gsub("\","/")
+  return (res .. sep .. "Scripts" .. sep .. "IfeelLikeSnow" .. sep .. "DF95" .. sep):gsub("\\","/")
 end
 
 local function run_script(rel)

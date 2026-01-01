@@ -1,6 +1,19 @@
-(
-echo -- Root shim: IFLS_ImGui_Core.lua
-echo local ok, mod = pcall(require, "IFLS.IFLS.Core.IFLS_ImGui_Core")
-echo if ok then return mod end
-echo return dofile(reaper.GetResourcePath() .. "\\Scripts\\IFLS\\IFLS\\Core\\IFLS_ImGui_Core.lua")
-) > IFLS_ImGui_Core.lua
+-- @description IFLS: Root shim for IFLS_ImGui_Core
+-- @version 1.0.1
+-- @author IFLS_IDM_Toolbar (repo fix)
+-- @about
+--   Compatibility shim. Loads the real IFLS_ImGui_Core.lua from Scripts/IFLS/IFLS/Core.
+
+local r = reaper
+local function path_join(a,b)
+  if a:sub(-1) == "/" or a:sub(-1) == "\" then return a .. b end
+  return a .. "/" .. b
+end
+
+local target = path_join(r.GetResourcePath(), "Scripts/IFLS/IFLS/Core/IFLS_ImGui_Core.lua")
+local chunk, err = loadfile(target)
+if not chunk then
+  r.MB("Missing IFLS core file:\n\n" .. target .. "\n\n" .. tostring(err), "IFLS", 0)
+  return nil
+end
+return chunk()

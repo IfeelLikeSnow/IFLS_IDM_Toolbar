@@ -6,7 +6,7 @@ local EXT_NS = "DF95_BATCH"
 local function df95_root()
   local sep = package.config:sub(1,1)
   local res = r.GetResourcePath()
-  return (res .. sep .. "Scripts" .. sep .. "IfeelLikeSnow" .. sep .. "DF95" .. sep):gsub("\","/")
+  return (res .. sep .. "Scripts" .. sep .. "IfeelLikeSnow" .. sep .. "DF95" .. sep):gsub("\\","/")
 end
 local function is_reamp_candidate_name(name)
   if not name or name == "" then return false end
