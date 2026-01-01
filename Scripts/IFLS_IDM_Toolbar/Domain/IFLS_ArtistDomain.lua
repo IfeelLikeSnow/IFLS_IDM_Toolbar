@@ -21,11 +21,11 @@
 -- eigene Logik nutzen, IFLS wird zur gemeinsamen Schicht "oben drüber".
 
 local r = reaper
-local __script_dir = (debug.getinfo(1,'S').source:sub(2):gsub('\\','/'):match('^(.*[/])') or '')
-local IFLS_RT = dofile(__script_dir .. '../lib/ifls_runtime.lua')
-local ROOT = IFLS_RT.add_paths(nil, {'Core','Domain','DF95'})
+local _script_dir = (debug.getinfo(1, "S").source:sub(2):gsub("\\\\","/"):match("^(.*[/])") or "")
+local RT = dofile(_script_dir .. "../lib/ifls_runtime.lua")
+local ROOT = RT.add_package_paths(RT.find_root(), {"Core","Domain"})
 
-local core_path = ROOT .. 'Core/'
+local core_path = ROOT .. "Core/"
 
 local ok_contracts, contracts = pcall(dofile, core_path .. "IFLS_Contracts.lua")
 local ok_ext,       ext       = pcall(dofile, core_path .. "IFLS_ExtState.lua")

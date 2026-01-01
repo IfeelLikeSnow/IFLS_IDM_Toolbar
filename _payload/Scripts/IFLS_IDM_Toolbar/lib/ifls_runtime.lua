@@ -1,12 +1,15 @@
--- Scripts/IFLS_IDM_Toolbar/lib/ifls_runtime.lua
--- Portable path/runtime helpers for the IFLS_IDM_Toolbar repo.
--- Goal: avoid hard-coded "<REAPER>/Scripts/IFLS/..." paths.
+-- lib/ifls_runtime.lua
+-- Portable runtime helpers for IFLS_IDM_Toolbar
+-- Goal: avoid hardcoded GetResourcePath() .. "/Scripts/IFLS/..." paths.
+-- Usage:
+--   local RT = dofile(script_dir .. "../lib/ifls_runtime.lua")
+--   local ROOT = RT.find_root()
+--   local core_path = ROOT .. "Core/"
+--   local domain_path = ROOT .. "Domain/"
 
 local M = {}
 
-local function norm(p)
-  return (p or ""):gsub("\\", "/")
-end
+local function norm(p) return (p or ""):gsub("\\", "/") end
 
 function M.script_dir(level)
   level = level or 2
@@ -20,40 +23,41 @@ function M.find_root(marker)
   marker = marker or "IFLS_IDM_Toolbar"
   local dir = M.script_dir(3)
   local root = dir:match("^(.*" .. marker .. "/)")
-  return root or dir
+  if root then return root end
+  -- fallback: assume this file is in <root>/lib/
+  root = M.script_dir(2):gsub("lib/$","")
+  return root
 end
 
-function M.add_paths(root, extra_dirs)
+function M.add_package_paths(root, extra_dirs)
   root = norm(root or M.find_root())
-  local paths = {
+  local add = {
     root .. "?.lua",
+    root .. "?/init.lua",
     root .. "lib/?.lua",
   }
   if type(extra_dirs) == "table" then
     for _, d in ipairs(extra_dirs) do
       d = norm(d):gsub("^/*", ""):gsub("/*$", "")
-      paths[#paths+1] = root .. d .. "/?.lua"
+      add[#add+1] = root .. d .. "/?.lua"
+      add[#add+1] = root .. d .. "/?/init.lua"
     end
   end
-  package.path = package.path .. ";" .. table.concat(paths, ";")
+  package.path = package.path .. ";" .. table.concat(add, ";")
   return root
 end
 
-function M.run(root, relfile)
-  root = norm(root or M.find_root())
-  relfile = norm(relfile):gsub("^/*", "")
-  local full = root .. relfile
-  local chunk, err = loadfile(full)
-  if not chunk then
-    reaper.MB("IFLS: Kann Script nicht laden:\n\n" .. full .. "\n\n" .. tostring(err), "IFLS Loader", 0)
-    return false
+function M.safe_dofile(path, label)
+  local ok, mod = pcall(dofile, path)
+  if ok then return mod end
+  if reaper and reaper.ShowMessageBox then
+    reaper.ShowMessageBox(
+      (label or "IFLS_IDM_Toolbar") .. "\n\nKonnte Datei nicht laden:\n" .. tostring(path) .. "\n\n" .. tostring(mod),
+      "IFLS Loader",
+      0
+    )
   end
-  local ok, runerr = xpcall(chunk, debug.traceback)
-  if not ok then
-    reaper.MB("IFLS: Fehler beim Ausführen:\n\n" .. full .. "\n\n" .. tostring(runerr), "IFLS Loader", 0)
-    return false
-  end
-  return true
+  return nil
 end
 
 return M

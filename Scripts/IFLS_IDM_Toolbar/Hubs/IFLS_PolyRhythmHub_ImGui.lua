@@ -13,10 +13,11 @@ if not ok_imgui then
 end
 local ig = imgui
 
-local resource_path = r.GetResourcePath()
-local core_path     = resource_path .. "/Scripts/IFLS/IFLS/Core/"
-local domain_path   = resource_path .. "/Scripts/IFLS/IFLS/Domain/"
-
+local _script_dir = (debug.getinfo(1, "S").source:sub(2):gsub("\","/"):match("^(.*[/])") or "")
+local RT = dofile(_script_dir .. "../lib/ifls_runtime.lua")
+local ROOT = RT.add_package_paths(RT.find_root(), {"Core","Domain","Hubs","Tools"})
+local core_path   = ROOT .. "Core/"
+local domain_path = ROOT .. "Domain/"
 local ok_ext, ext = pcall(dofile, core_path .. "IFLS_ExtState.lua")
 if not ok_ext or type(ext) ~= "table" then
   ext = {

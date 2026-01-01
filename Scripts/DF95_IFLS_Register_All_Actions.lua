@@ -44,7 +44,6 @@ local allow_patterns = {
 local scan_roots = {
   "Scripts/DF95_ToolbarSuite",
   "Scripts/IFLS",
-  "Scripts/IFLS_IDM_Toolbar",
   "Scripts/DF95",
   "Scripts/DF95Framework",
   "Scripts",

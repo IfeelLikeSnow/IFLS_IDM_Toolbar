@@ -53,10 +53,10 @@ local scripts_root = join(resource, "Scripts")
 local SECTION_MAIN = 0
 
 local buttons = {
-  {label="IFLS Beat Control Center", script_rel="IFLS/IFLS/Hubs/IFLS_BeatControlCenter_ImGui.lua"},
-  {label="IFLS Artist Hub",         script_rel="IFLS/IFLS/Hubs/IFLS_ArtistHub_ImGui.lua"},
-  {label="IFLS SampleGalaxy",       script_rel="IFLS/IFLS/Hubs/IFLS_SampleLibraryHub_ImGui.lua"},
-  {label="IFLS Groove & Rhythm",    script_rel="IFLS/IFLS/Hubs/IFLS_PolyRhythmHub_ImGui.lua"},
+  {label="IFLS Beat Control Center", script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua"},
+  {label="IFLS Artist Hub",         script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua"},
+  {label="IFLS SampleGalaxy",       script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua"},
+  {label="IFLS Groove & Rhythm",    script_rel="IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua"},
   {label="IFLS Macros & Scenes",    script_rel="IFLS/IFLS/Hubs/IFLS_SceneHub_ImGui.lua"},
   {label="IFLS FX Brain",           script_rel="IFLS/IFLS/Hubs/IFLS_MasterHub_ImGui.lua"},
   {label="IFLS Diagnostics / Inspector", script_rel="IFLS/DF95/DF95_Diagnostics_Insight_Run.lua"},

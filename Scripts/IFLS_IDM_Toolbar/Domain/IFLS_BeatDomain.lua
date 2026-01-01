@@ -16,11 +16,11 @@
 -- Damit vermeidest du Copy&Paste-Fehler im restlichen Code.
 
 local r = reaper
-local __script_dir = (debug.getinfo(1,'S').source:sub(2):gsub('\\','/'):match('^(.*[/])') or '')
-local IFLS_RT = dofile(__script_dir .. '../lib/ifls_runtime.lua')
-local ROOT = IFLS_RT.add_paths(nil, {'Core','Domain','DF95'})
+local _script_dir = (debug.getinfo(1, "S").source:sub(2):gsub("\\\\","/"):match("^(.*[/])") or "")
+local RT = dofile(_script_dir .. "../lib/ifls_runtime.lua")
+local ROOT = RT.add_package_paths(RT.find_root(), {"Core","Domain"})
 
-local core_path = ROOT .. 'Core/'
+local core_path = ROOT .. "Core/"
 
 ----------------------------------------------------------------
 -- Core-Module laden
@@ -48,7 +48,7 @@ if not ok_ext or type(ext) ~= "table" then
   }
 end
 
-local domain_path = ROOT .. 'Domain/'
+local domain_path = ROOT .. "Domain/"
 local ok_human_bridge, human_bridge = pcall(dofile, domain_path .. "IFLS_HumanizeDomain.lua")
 
 local M = {}

@@ -3,10 +3,6 @@
 -- Allows IFLS domains (ArtistFX, BeatControlCenter, KitBuilder) to query IDM groups.
 
 local r = reaper
-local __script_dir = (debug.getinfo(1,'S').source:sub(2):gsub('\\','/'):match('^(.*[/])') or '')
-local IFLS_RT = dofile(__script_dir .. '../lib/ifls_runtime.lua')
-local ROOT = IFLS_RT.add_paths(nil, {'DF95'})
-
 local M = {}
 
 local df95_meta = nil
@@ -19,7 +15,8 @@ local df95_flavors = nil
 
 local function try_load_df95_flavors()
   if df95_flavors ~= nil then return df95_flavors end
-  local path = ROOT .. "DF95/DF95_PluginFlavors.lua"
+  local res = r.GetResourcePath()
+  local path = res .. "/Scripts/IFLS/DF95/DF95_PluginFlavors.lua"
   local ok, mod = pcall(dofile, path)
   if not ok or type(mod) ~= "table" then
     df95_flavors = false
@@ -31,7 +28,8 @@ end
 
   end
 
-  local path = ROOT .. "DF95/DF95_PluginMetaDomain.lua"
+  local res = r.GetResourcePath()
+  local path = res .. "/Scripts/IFLS/DF95/DF95_PluginMetaDomain.lua"
   local ok, mod = pcall(dofile, path)
   if not ok or type(mod) ~= "table" then
     df95_meta = false

@@ -2,22 +2,22 @@
 -- Phase 29: Sample Library Hub (UCS / SampleDB)
 
 local r = reaper
-if not r.ImGui then
-  r.ShowMessageBox('ReaImGui API not found.
-Bitte installiere ReaImGui via ReaPack (cfillion).', 'IFLS SampleLibraryHub', 0)
-  return
-end
-local __script_dir = (debug.getinfo(1,'S').source:sub(2):gsub('\','/'):match('^(.*[/])') or '')
-local IFLS_RT = dofile(__script_dir .. '../lib/ifls_runtime.lua')
-local ROOT = IFLS_RT.add_paths(nil, {'DF95'})
-
 local ig = r.ImGui
 
 local ctx = ig.CreateContext('IFLS_SampleLibraryHub')
 
 local function run_df95_script(relpath)
-  local base = ROOT .. 'DF95/'
-  local full = base .. relpath
+  local function __exists(p)
+  local f=io.open(p,'rb'); if f then f:close(); return true end
+  return false
+end
+local function __df95_base()
+  local res = r.GetResourcePath()
+  local cand = res .. '/Scripts/IFLS_IDM_Toolbar/DF95/'
+  if __exists(cand .. 'DF95_V137_SampleDB_ScanFolder_UCSLight_HomeField.lua') then return cand end
+  return res .. '/Scripts/IFLS/DF95/'
+end
+local base = __df95_base()local full = base .. relpath
   local chunk, err = loadfile(full)
   if not chunk then
     r.ShowMessageBox('Konnte DF95-Script nicht laden: ' .. tostring(full) .. '\nFehler: ' .. tostring(err), 'IFLS SampleLibraryHub', 0)

@@ -4,20 +4,20 @@
 -- und optional IFLS_BeatDomain auf deinen Beat- und FX-Workflow wirken.
 --
 -- Abhängigkeiten:
---   Scripts/IFLS_IDM_Toolbar/Core/IFLS_Contracts.lua
---   Scripts/IFLS_IDM_Toolbar/Core/IFLS_ExtState.lua
---   Scripts/IFLS_IDM_Toolbar/Core/IFLS_ImGui_Core.lua
---   Scripts/IFLS_IDM_Toolbar/Domain/IFLS_ArtistDomain.lua
---   (optional) Scripts/IFLS_IDM_Toolbar/Domain/IFLS_BeatDomain.lua
+--   Scripts/IFLS/IFLS/Core/IFLS_Contracts.lua
+--   Scripts/IFLS/IFLS/Core/IFLS_ExtState.lua
+--   Scripts/IFLS/IFLS/Core/IFLS_ImGui_Core.lua
+--   Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain.lua
+--   (optional) Scripts/IFLS/IFLS/Domain/IFLS_BeatDomain.lua
 
 local r  = reaper
 local ig = r.ImGui
 
-local __script_dir = (debug.getinfo(1,'S').source:sub(2):gsub('\','/'):match('^(.*[/])') or '')
-local IFLS_RT = dofile(__script_dir .. '../lib/ifls_runtime.lua')
-local ROOT = IFLS_RT.add_paths(nil, {'Core','Domain','DF95','DF95_Slicing','Tools','MicFX'})
-local core_path   = ROOT .. 'Core/'
-local domain_path = ROOT .. 'Domain/'
+local _script_dir = (debug.getinfo(1, "S").source:sub(2):gsub("\","/"):match("^(.*[/])") or "")
+local RT = dofile(_script_dir .. "../lib/ifls_runtime.lua")
+local ROOT = RT.add_package_paths(RT.find_root(), {"Core","Domain","Hubs","Tools"})
+local core_path   = ROOT .. "Core/"
+local domain_path = ROOT .. "Domain/"
 local ok_contracts, contracts = pcall(dofile, core_path .. "IFLS_Contracts.lua")
 local ok_ext,       ext       = pcall(dofile, core_path .. "IFLS_ExtState.lua")
 local ok_ui,        ui_core   = pcall(dofile, core_path .. "IFLS_ImGui_Core.lua")
@@ -36,7 +36,7 @@ end
 
 if not ok_artist or type(artist) ~= "table" then
   r.ShowMessageBox(
-    "IFLS Artist Hub: IFLS_ArtistDomain.lua konnte nicht geladen werden.\nPrüfe Pfad: Scripts/IFLS_IDM_Toolbar/Domain/",
+    "IFLS Artist Hub: IFLS_ArtistDomain.lua konnte nicht geladen werden.\nPrüfe Pfad: Scripts/IFLS/IFLS/Domain/",
     "IFLS Artist Hub",
     0
   )
