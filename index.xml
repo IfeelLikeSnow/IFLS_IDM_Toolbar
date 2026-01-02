@@ -7987,7 +7987,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_BeatControlCenter_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: Beat Control Center (wrapper)">
@@ -8001,7 +8001,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Diagnostics_DebugDemo.lua" type="script" desc="IFLS_IDM_Toolbar: Dev / Debug (wrapper)">
@@ -8015,7 +8015,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Diagnostics_Insight_Run.lua" type="script" desc="IFLS_IDM_Toolbar: Diagnostics / Inspector (wrapper)">
@@ -8029,7 +8029,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_MasterHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: FX Brain (Master Hub) (wrapper)">
@@ -8043,7 +8043,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_PolyRhythmHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: Groove &amp; Rhythm (PolyRhythm Hub) (wrapper)">
@@ -8057,7 +8057,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_SampleLibraryHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: SampleGalaxy / Sample Library Hub (wrapper)">
@@ -8071,7 +8071,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_SceneHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: Macros &amp; Scenes (Scene Hub) (wrapper)">
@@ -8085,7 +8085,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/_payload/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua</source>
       </version>
     </reapack>
   </category>
@@ -16169,7 +16169,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_BeatControlCenter_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: Beat Control Center (wrapper)">
@@ -16183,7 +16183,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Diagnostics_DebugDemo.lua" type="script" desc="IFLS_IDM_Toolbar: Dev / Debug (wrapper)">
@@ -16197,7 +16197,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_Diagnostics_Insight_Run.lua" type="script" desc="IFLS_IDM_Toolbar: Diagnostics / Inspector (wrapper)">
@@ -16211,7 +16211,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_MasterHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: FX Brain (Master Hub) (wrapper)">
@@ -16225,7 +16225,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_PolyRhythmHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: Groove &amp; Rhythm (PolyRhythm Hub) (wrapper)">
@@ -16239,7 +16239,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_SampleLibraryHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: SampleGalaxy / Sample Library Hub (wrapper)">
@@ -16253,7 +16253,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_SceneHub_ImGui.lua" type="script" desc="IFLS_IDM_Toolbar: Macros &amp; Scenes (Scene Hub) (wrapper)">
@@ -16267,7 +16267,7 @@
 ]]></description>
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar" time="2026-01-01T21:21:55Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua</source>
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua</source>
       </version>
     </reapack>
   </category>
