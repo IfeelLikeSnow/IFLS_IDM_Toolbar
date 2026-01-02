@@ -94,7 +94,7 @@ f:write("; Toolbar syntax: item_N=ACTION  LABEL, icon_N=text_wide\n")
 f:write("; Import into: Options > Customize menus/toolbars... > Floating toolbar 1 (Toolbar 1) > Import...\n\n")
 
 -- Exact allowed header per REAPER (see reaper-menu.ini rules)
-f:write("[Floating toolbar 1]\n")
+f:write("[Floating toolbar 1 (Toolbar 1)]\n")
 f:write("title=IFLS Main\n")
 
 for _,it in ipairs(resolved) do

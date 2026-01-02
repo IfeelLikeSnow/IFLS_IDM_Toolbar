@@ -36,7 +36,7 @@ INDEX_NAME = "DF95 Toolbar Suite"
 AUTHOR = "IfeelLikeSnow"
 
 # IMPORTANT: must match your GitHub repo + branch
-RAW_BASE = "https://raw.githubusercontent.com/IfeelLikeSnow/df95-toolbar-suite/main/"
+RAW_BASE = "https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/"
 
 # Package version (ReaPack uses this as the displayed version)
 VERSION = "1.0.0"
