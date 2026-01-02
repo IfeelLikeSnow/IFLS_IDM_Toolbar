@@ -1,5 +1,5 @@
 -- @description DF95: Rebuild IFLS Main Toolbar MenuSet (non-empty, self-resolving)
--- @version 1.0.1
+-- @version 1.0.2
 -- @author DF95
 -- @about
 --   Fixes "toolbar/menu empty" by generating an importable MenuSet that uses REAL command IDs
@@ -122,3 +122,5 @@ msg("2) Select: Floating toolbar 1 (Toolbar 1)")
 msg("3) Import... > IFLS_Main.Toolbar.ReaperMenuSet")
 msg("4) If toolbar still looks empty: ensure you are viewing Floating toolbar 1, not Main toolbar.")
 msg("=== Done ===")
+
+reaper.ShowMessageBox("IFLS Toolbar Rebuild fertig. Prüfe ReaScript Console für Details.", "IFLS Toolbar Rebuild", 0)
