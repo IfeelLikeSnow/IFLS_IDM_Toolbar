@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DF95 Toolbar Suite" commit="9090d5bf4435fdfbbbe59e250d6dbcc0f10d791b">
+<index version="1" name="IFLS_IDM_Toolbar" commit="a4b876ec464e0cb122612b04dcaffe9eab7bad8b">
   <category name="_payload/Effects/DF95">
     <reapack name="DF95_Drone_Granular.jsfx" type="effect" desc="DF95 Drone Granular Texture">
       <metadata>
@@ -8190,6 +8190,31 @@
     </reapack>
   </category>
   <category name="Scripts">
+    <reapack name="IFLS_Build_FXParamIndex_AllInOne.lua" type="script" desc="IFLS Build FX Param Index (All-in-One) - run once to create TSV+JSON">
+      <metadata>
+        <description><![CDATA[IFLS Build FX Param Index (All-in-One) - run once to create TSV+JSON]]></description>
+      </metadata>
+      <version name="1.0.1" author="IFLS" time="2026-01-02T16:29:10Z">
+        <source main="main" file="Scripts/IFLS_Build_FXParamIndex_AllInOne.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_FXParamIndex_Shim.lua" type="script" desc="IFLS FX Param Index shim enabling require('IFLS_FXParamIndex')">
+      <metadata>
+        <description><![CDATA[IFLS FX Param Index shim enabling require('IFLS_FXParamIndex')]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-02T16:29:10Z">
+        <source main="main" file="Scripts/IFLS_FXParamIndex.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_FXParamIndex_Library.lua" type="script" desc="IFLS FX Param Index library (reads fx_param_index.tsv)">
+      <metadata>
+        <description><![CDATA[IFLS FX Param Index library (reads fx_param_index.tsv)]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-02T16:29:10Z">
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/lib/IFLS_FXParamIndex.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/lib/IFLS_FXParamIndex.lua</source>
+      </version>
+    </reapack>
+
     <reapack name="DF95_IFLS_Open_Resource_Path.lua" type="script" desc="DF95/IFLS: Open REAPER resource path (for troubleshooting)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -8255,28 +8280,6 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/5d11a8572fd949badc960e93a6baa992be80f9c5/Scripts/DF95_IFLS_Sanity_Check.lua</source>
       </version>
     </reapack>
-    <reapack name="IFLS_Build_FXParamIndex_AllInOne.lua" type="script" desc="IFLS Build FX Param Index (All-in-One)">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 Run once:\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Scans installed FX\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Dumps all parameters to TSV + JSON\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab Writes/updates library + require shim: Scripts/IFLS_IDM_Toolbar/lib/IFLS_FXParamIndex.lua Scripts/IFLS_FXParamIndex.lua (shim for require)\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Output data: <REAPER_RESOURCE_PATH>/Scripts/IFLS_IDM_Toolbar/_data/fx_param_index.tsv <REAPER_RESOURCE_PATH>/Scripts/IFLS_IDM_Toolbar/_data/fx_param_index.json\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 WARNING: Instantiating some plugins can show dialogs or be slow. Best run in an empty project. Edit SKIP_PATTERNS below if needed.\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.0.1" author="IFLS" time="2026-01-02T16:29:10Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/9090d5bf4435fdfbbbe59e250d6dbcc0f10d791b/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
-      </version>
-      <version name="1.0" author="IFLS" time="2026-01-02T15:11:12Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/581fa38ce875b81e94acfd3ce0e5d654421abd93/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
-      </version>
-    </reapack>
     <reapack name="IFLS_Diagnostics.lua" type="script" desc="IFLS: Root shim for IFLS_Diagnostics">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -8289,22 +8292,6 @@
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar (repo fix)" time="2026-01-01T21:21:55Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_Diagnostics.lua</source>
-      </version>
-    </reapack>
-    <reapack name="IFLS_FXParamIndex_Library.lua" type="script" desc="IFLS FX Param Index library (reads fx_param_index.tsv)">
-      <metadata>
-        <description><![CDATA[IFLS FX Param Index library (reads fx_param_index.tsv)]]></description>
-      </metadata>
-      <version name="1.0.0" author="IFLS" time="2026-01-02T16:29:10Z">
-        <source main="main" file="Scripts/IFLS_IDM_Toolbar/lib/IFLS_FXParamIndex.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/lib/IFLS_FXParamIndex.lua</source>
-      </version>
-    </reapack>
-    <reapack name="IFLS_FXParamIndex_Shim.lua" type="script" desc="IFLS FX Param Index shim enabling require('IFLS_FXParamIndex')">
-      <metadata>
-        <description><![CDATA[IFLS FX Param Index shim enabling require('IFLS_FXParamIndex')]]></description>
-      </metadata>
-      <version name="1.0.0" author="IFLS" time="2026-01-02T16:29:10Z">
-        <source main="main" file="Scripts/IFLS_FXParamIndex.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_ImGui_Core.lua" type="script" desc="IFLS: Root shim for IFLS_ImGui_Core">
@@ -15471,8 +15458,91 @@
 }
 ]]></description>
       </metadata>
-      <version name="1.0.2" author="DF95 (generated by Reaper DAW Ultimate Assistant)" time="2026-01-01T19:02:33Z">
-        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/5d11a8572fd949badc960e93a6baa992be80f9c5/Scripts/IFLS_IDM_Toolbar/DF95/Installers/DF95_Build_IFLS_Main_Toolbar_MenuSet.lua</source>
+            <version name="1.0.3" author="IFLS_IDM_Toolbar (bundled)" time="2026-01-02T20:16:44Z">
+        <source main="main" file="Scripts/IFLS_IDM_Toolbar/DF95/Installers/DF95_Build_IFLS_Main_Toolbar_MenuSet.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/DF95/Installers/DF95_Build_IFLS_Main_Toolbar_MenuSet.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua</source>
+        <source file="Scripts/IFLS_IDM_Toolbar/lib/ifls_runtime.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/lib/ifls_runtime.lua</source>
+        <source file="Scripts/IFLS/IFLS/Core/IFLS_Contracts.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Core/IFLS_Contracts.lua</source>
+        <source file="Scripts/IFLS/IFLS/Core/IFLS_ExtState.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Core/IFLS_ExtState.lua</source>
+        <source file="Scripts/IFLS/IFLS/Core/IFLS_ImGui_Core.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Core/IFLS_ImGui_Core.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain_EuclidMelody_Patch.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain_EuclidMelody_Patch.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain_EuclidPro_RatchetPatch.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ArtistDomain_EuclidPro_RatchetPatch.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ArtistFXChainDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ArtistFXChainDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_AudioImportDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_AudioImportDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_AudioPatternBridgeDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_AudioPatternBridgeDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_BeatDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_BeatDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_BeatEngine_GrooveHook.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_BeatEngine_GrooveHook.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ChainTemplates.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ChainTemplates.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_Diagnostics.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_Diagnostics.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_Diagnostics_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_Diagnostics_DebugDemo.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_EuclidMelodyDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_EuclidMelodyDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_EuclidProDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_EuclidProDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_EuclidProProfiles.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_EuclidProProfiles.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_FlavorState.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_FlavorState.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_FXBrain_FlavorIndicator.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_FXBrain_FlavorIndicator.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_FXChainRecommender.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_FXChainRecommender.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_FXChainRecommender_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_FXChainRecommender_DebugDemo.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_GrooveDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_GrooveDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_GroovePool.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_GroovePool.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_GrooveProfiles.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_GrooveProfiles.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_HumanizeDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_HumanizeDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_IDMFlavorProfiles.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_IDMFlavorProfiles.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_KitSchemaDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_KitSchemaDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_MacroControls.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_MacroControls.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_MacrosScenes_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_MacrosScenes_DebugDemo.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_MarkovRhythmDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_MarkovRhythmDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_PatternDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_PatternDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_PatternDomain_EuclidMelody_Patch.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_PatternDomain_EuclidMelody_Patch.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_PerfProbe.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_PerfProbe.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_PluginMetaBridgeDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_PluginMetaBridgeDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_PolyRhythmDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_PolyRhythmDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ReverbEQDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ReverbEQDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_RhythmMorpher.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_RhythmMorpher.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_RhythmMorph_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_RhythmMorph_DebugDemo.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_RhythmStyles.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_RhythmStyles.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SampleDBDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SampleDBDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SampleEmbeddings.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SampleEmbeddings.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SampleGalaxy_DebugDemo.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SampleGalaxy_DebugDemo.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SceneArrangerDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SceneArrangerDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SceneDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SceneDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SceneDomain_EuclidMelody_Patch.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SceneDomain_EuclidMelody_Patch.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SceneDomain_EuclidPro_RatchetPatch.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SceneDomain_EuclidPro_RatchetPatch.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SceneEvolutionDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SceneEvolutionDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_ScenePresets.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_ScenePresets.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SimilaritySearch.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SimilaritySearch.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_SliceDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_SliceDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_TuningDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_TuningDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_TX16WxStyleDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_TX16WxStyleDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Domain/IFLS_VariationDomain.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Domain/IFLS_VariationDomain.lua</source>
+        <source file="Scripts/IFLS/IFLS/Hubs/IFLS_BeatControlCenter_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Hubs/IFLS_BeatControlCenter_ImGui.lua</source>
+        <source file="Scripts/IFLS/IFLS/Hubs/IFLS_ArtistHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Hubs/IFLS_ArtistHub_ImGui.lua</source>
+        <source file="Scripts/IFLS/IFLS/Hubs/IFLS_SampleLibraryHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Hubs/IFLS_SampleLibraryHub_ImGui.lua</source>
+        <source file="Scripts/IFLS/IFLS/Hubs/IFLS_PolyRhythmHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Hubs/IFLS_PolyRhythmHub_ImGui.lua</source>
+        <source file="Scripts/IFLS/IFLS/Hubs/IFLS_SceneHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Hubs/IFLS_SceneHub_ImGui.lua</source>
+        <source file="Scripts/IFLS/IFLS/Hubs/IFLS_MasterHub_ImGui.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/IFLS/Hubs/IFLS_MasterHub_ImGui.lua</source>
+        <source file="Scripts/IFLS/DF95/DF95_Diagnostics_Insight_Run.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/DF95/DF95_Diagnostics_Insight_Run.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Capabilities.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Capabilities.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Config.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Config.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Core.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Core.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_DepScanner.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_DepScanner.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_Insight.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_Insight.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_RefactorAssist_ApplySafe_RootResolver.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_RefactorAssist_ApplySafe_RootResolver.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_RefactorAssist_DryRun.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_RefactorAssist_DryRun.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_SelfTest.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Diagnostics_Lib_SelfTest.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_Lib_Reporting.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_Lib_Reporting.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_LuaPath.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_LuaPath.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_MenuBuilder.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_MenuBuilder.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_PathResolver.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_PathResolver.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_RequireRules.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_RequireRules.lua</source>
+        <source file="Scripts/DF95Framework/Lib/DF95_WrapperAdapter.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/DF95Framework/Lib/DF95_WrapperAdapter.lua</source>
       </version>
     </reapack>
     <reapack name="DF95_IFLS_InstallDoctor_CreateShims.lua" type="script" desc="DF95 IFLS InstallDoctor - Create Root Shims + Bootstrap">
