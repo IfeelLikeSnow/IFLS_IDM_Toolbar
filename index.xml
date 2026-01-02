@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DF95 Toolbar Suite" commit="a4b876ec464e0cb122612b04dcaffe9eab7bad8b">
+<index version="1" name="DF95 Toolbar Suite" commit="581fa38ce875b81e94acfd3ce0e5d654421abd93">
   <category name="_payload/Effects/DF95">
     <reapack name="DF95_Drone_Granular.jsfx" type="effect" desc="DF95 Drone Granular Texture">
       <metadata>
@@ -8255,6 +8255,27 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/5d11a8572fd949badc960e93a6baa992be80f9c5/Scripts/DF95_IFLS_Sanity_Check.lua</source>
       </version>
     </reapack>
+    <reapack name="IFLS_Build_FXParamIndex_AllInOne.lua" type="script" desc="IFLS: Build FX Param Index (All-in-One)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Run once:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1)\tx360\tab Scans installed FX\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2)\tx360\tab Dumps all parameters to TSV + JSON\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3)\tx360\tab Writes library + require shim: Scripts/IFLS_IDM_Toolbar/lib/IFLS_FXParamIndex.lua Scripts/IFLS_FXParamIndex.lua (shim for require)\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 WARNING: Instantiating some plugins can show dialogs or be slow. Best run in an empty project. Edit SKIP_PATTERNS below if needed.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-02T15:03:30Z">
+        <source main="main">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
+      </version>
+      <version name="1.0" author="IFLS" time="2026-01-02T15:11:12Z">
+        <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/581fa38ce875b81e94acfd3ce0e5d654421abd93/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
+      </version>
+    </reapack>
     <reapack name="IFLS_Diagnostics.lua" type="script" desc="IFLS: Root shim for IFLS_Diagnostics">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -8267,6 +8288,14 @@
       </metadata>
       <version name="1.0.1" author="IFLS_IDM_Toolbar (repo fix)" time="2026-01-01T21:21:55Z">
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/IFLS_Diagnostics.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_FXParamIndex.lua" type="script" desc="IFLS: FX Param Index loader (shim)">
+      <metadata>
+        <description><![CDATA[Builds/loads a local FX parameter index (TSV+JSON) used by IFLS tools.]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-02T15:03:30Z">
+        <source main="main">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
       </version>
     </reapack>
     <reapack name="IFLS_ImGui_Core.lua" type="script" desc="IFLS: Root shim for IFLS_ImGui_Core">
@@ -8297,23 +8326,7 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/RealmGui.lua</source>
       </version>
     </reapack>
-      <reapack name="IFLS_Build_FXParamIndex_AllInOne.lua" type="script" desc="IFLS: Build FX Param Index (All-in-One)">
-      <metadata>
-        <description><![CDATA[Builds/loads a local FX parameter index (TSV+JSON) used by IFLS tools.]]></description>
-      </metadata>
-      <version name="1.0.0" author="IFLS" time="2026-01-02T15:03:30Z">
-        <source main="main">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
-      </version>
-    </reapack>
-    <reapack name="IFLS_FXParamIndex.lua" type="script" desc="IFLS: FX Param Index loader (shim)">
-      <metadata>
-        <description><![CDATA[Builds/loads a local FX parameter index (TSV+JSON) used by IFLS tools.]]></description>
-      </metadata>
-      <version name="1.0.0" author="IFLS" time="2026-01-02T15:03:30Z">
-        <source main="main">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
-      </version>
-    </reapack>
-</category>
+  </category>
   <category name="Scripts/DF95">
     <reapack name="DF95_IFLS_CoreAssets.lua" type="script" desc="DF95 IFLS Core Assets (Full install metapackage)">
       <metadata>
