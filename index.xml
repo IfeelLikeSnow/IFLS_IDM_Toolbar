@@ -8297,7 +8297,23 @@
         <source main="main">https://github.com/IfeelLikeSnow/IFLS_IDM_Toolbar/raw/2895693016cf6bf89abfe13d60c74ac71b72491a/Scripts/RealmGui.lua</source>
       </version>
     </reapack>
-  </category>
+      <reapack name="IFLS_Build_FXParamIndex_AllInOne.lua" type="script" desc="IFLS: Build FX Param Index (All-in-One)">
+      <metadata>
+        <description><![CDATA[Builds/loads a local FX parameter index (TSV+JSON) used by IFLS tools.]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-02T15:03:30Z">
+        <source main="main">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
+      </version>
+    </reapack>
+    <reapack name="IFLS_FXParamIndex.lua" type="script" desc="IFLS: FX Param Index loader (shim)">
+      <metadata>
+        <description><![CDATA[Builds/loads a local FX parameter index (TSV+JSON) used by IFLS tools.]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-02T15:03:30Z">
+        <source main="main">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
+      </version>
+    </reapack>
+</category>
   <category name="Scripts/DF95">
     <reapack name="DF95_IFLS_CoreAssets.lua" type="script" desc="DF95 IFLS Core Assets (Full install metapackage)">
       <metadata>
