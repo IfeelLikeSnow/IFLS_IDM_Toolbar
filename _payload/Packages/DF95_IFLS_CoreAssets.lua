@@ -1,0 +1,29 @@
+-- @description DF95 IFLS Core Assets (Full install metapackage)
+-- @version 1.0.4
+-- @author IfeelLikeSnow
+-- @about
+--   Installs the full DF95/IFLS toolbar suite payload (scripts + menus + toolbars + assets).
+--   After install, run: DF95 OneClick Setup (IFLS Main) to generate and import the toolbar mapping.
+-- @metapackage
+-- @provides
+--   [main] _payload/Scripts/IFLS/DF95/Installers/DF95_OneClick_Setup_Theme_Toolbars_IFLS_Main.lua > Scripts/IFLS/DF95/Installers/DF95_OneClick_Setup_Theme_Toolbars_IFLS_Main.lua
+--   [main] _payload/Scripts/IFLS/DF95/Installers/DF95_Build_IFLS_Main_Toolbar_MenuSet.lua > Scripts/IFLS/DF95/Installers/DF95_Build_IFLS_Main_Toolbar_MenuSet.lua
+--   [main] _payload/Scripts/IFLS/DF95/Installers/DF95_IFLS_InstallDoctor_CreateShims.lua > Scripts/IFLS/DF95/Installers/DF95_IFLS_InstallDoctor_CreateShims.lua
+--   [nomain] _payload/Scripts/** > Scripts/
+--   [nomain] _payload/Effects/** > Effects/
+--   [nomain] _payload/FXChains/** > FXChains/
+--   [nomain] _payload/TrackTemplates/** > TrackTemplates/
+--   [nomain] _payload/RenderPresets/** > RenderPresets/
+--   [nomain] _payload/Projects/** > Projects/
+--   [nomain] _payload/Reports/** > Reports/
+--   [nomain] _payload/Support/** > Support/
+--   [nomain] _payload/Icons/** > Icons/
+--   [nomain] _payload/MenuSets/** > MenuSets/
+--   [nomain] _payload/Menus/** > Menus/
+--   [nomain] _payload/Toolbars/** > Toolbars/
+--   [nomain] _payload/Chains/** > Chains/
+--   [nomain] _payload/Data/** > Data/
+--   [nomain] _payload/Theme/** > ColorThemes/
+--   [nomain] _payload/ThemeMod/** > ColorThemes/DF95/
+--   [nomain] _payload/_selectors/** > _selectors/
+--   [nomain] _payload/tools/** > tools/
