@@ -34,7 +34,7 @@ REPO_NAME = "DF95 Toolbar Suite"
 AUTHOR = "IfeelLikeSnow"
 VERSION = "1.0.0"
 
-RAW_BASE_DEFAULT = "https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/"
+RAW_BASE_DEFAULT = "https://raw.githubusercontent.com/IfeelLikeSnow/df95-toolbar-suite/main/"
 
 # Core content roots (relative to repo root) that should be owned by Core package.
 CORE_ROOTS = [

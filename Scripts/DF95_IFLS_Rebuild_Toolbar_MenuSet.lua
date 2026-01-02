@@ -1,5 +1,5 @@
 -- @description DF95: Rebuild IFLS Main Toolbar MenuSet (non-empty, self-resolving)
--- @version 1.0.1
+-- @version 1.0.2
 -- @author DF95
 -- @about
 --   Fixes "toolbar/menu empty" by generating an importable MenuSet that uses REAL command IDs
@@ -55,12 +55,12 @@ local function write_menuset(out_path, items)
   local function w(s) f:write(s) end
 
   -- IMPORTANT: keep it simple ASCII/UTF-8 without BOM. Use \n (REAPER accepts it).
-  w("[Floating toolbar 1 (Toolbar 1)]\n")
+  w("[Floating toolbar 1]\n")
   w("title=IFLS Main\n")
   for i,it in ipairs(items) do
     local id = i-1
     -- icon: text button with tooltip
-    w(("icon_%d=text\n"):format(id))
+    w(("icon_%d=text_wide\n"):format(id))
     -- item: ActionCommandID-string must begin with "_" (per REAPER menu/toolbar rules)
     w(("item_%d=%s %s\n"):format(id, it.cmd, it.title))
   end
@@ -77,11 +77,22 @@ local scripts_root = join(res, "Scripts")
 
 -- Candidate scripts (adjust as your project evolves)
 local candidates = {
+  { title="IFLS Beat Control Center",   rel="IFLS_IDM_Toolbar/Hubs/IFLS_BeatControlCenter_ImGui.lua" },
+  { title="IFLS Artist Hub",           rel="IFLS_IDM_Toolbar/Hubs/IFLS_ArtistHub_ImGui.lua" },
+  { title="IFLS SampleGalaxy",         rel="IFLS_IDM_Toolbar/Hubs/IFLS_SampleLibraryHub_ImGui.lua" },
+  { title="IFLS Groove & Rhythm",      rel="IFLS_IDM_Toolbar/Hubs/IFLS_PolyRhythmHub_ImGui.lua" },
+
+  -- placeholders for the rest of the toolbar (will show as labels if missing)
+  { title="IFLS Macros & Scenes",      rel="IFLS_IDM_Toolbar/Hubs/IFLS_SceneHub_ImGui.lua" },
+  { title="IFLS FX Brain",             rel="IFLS_IDM_Toolbar/Hubs/IFLS_MasterHub_ImGui.lua" },
+  { title="IFLS Diagnostics / Inspector", rel="IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_Insight_Run.lua" },
+  { title="IFLS Dev / Debug",          rel="IFLS_IDM_Toolbar/Hubs/IFLS_Diagnostics_DebugDemo.lua" },
+
+  -- utilities
   { title="IFLS: InstallDoctor (Create Shims)", rel="IFLS/DF95/Installers/DF95_IFLS_InstallDoctor_CreateShims.lua" },
   { title="IFLS: Diagnostics",                 rel="IFLS_Diagnostics.lua" },
-  -- add your main launcher here if/when you know the filename:
-  -- { title="IFLS: Main", rel="IFLS/DF95/IFLS_Main.lua" },
 }
+
 
 local items = {}
 local missing = 0
