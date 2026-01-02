@@ -1,6 +1,6 @@
 -- @description IFLS: Build FX Param Index (All-in-One)
 -- @author IFLS
--- @version 1.0
+-- @version 1.0.1
 -- @about
 --   Run once:
 --     1) Scans installed FX
