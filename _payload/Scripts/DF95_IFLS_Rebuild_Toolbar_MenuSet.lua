@@ -1,5 +1,5 @@
 -- @description DF95: Rebuild IFLS Main Toolbar MenuSet (non-empty, self-resolving)
--- @version 1.0.3
+-- @version 1.0.4
 -- @author DF95
 -- @about
 --   Fixes "toolbar/menu empty" by generating an importable MenuSet that uses REAL command IDs
@@ -17,6 +17,9 @@
 --     - Toolbar entries must have sequential item_0, item_1...; otherwise REAPER ignores following items.
 --     - ActionCommandID-strings must begin with "_" (e.g. "_RS...").
 --     - If a referenced script file does not exist, it will be skipped (but MenuSet will still be non-empty if any exist).
+
+-- @provides
+--   [nomain] _payload/Scripts/IFLS_IDM_Toolbar/** > Scripts/IFLS_IDM_Toolbar/
 
 local function msg(s) reaper.ShowConsoleMsg(tostring(s).."\n") end
 
