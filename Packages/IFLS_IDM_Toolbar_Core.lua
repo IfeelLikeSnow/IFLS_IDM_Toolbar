@@ -1,0 +1,13 @@
+-- @description IFLS IDM Toolbar (Core) - installs hubs, installers, libs and assets.
+-- @version 1.0.0
+-- @author IFLS
+-- @metapackage
+-- @provides
+--   [main] Scripts/IFLS_IDM_Toolbar/Hubs/*.lua
+--   [main] Scripts/IFLS_IDM_Toolbar/DF95/Installers/*.lua
+--   [main] Scripts/IFLS_Build_FXParamIndex_AllInOne.lua
+--   [main] Scripts/IFLS_FXParamIndex.lua
+--   [nomain] Scripts/IFLS_IDM_Toolbar/**.lua
+--   [nomain] Icons/**
+--   [nomain] Toolbars/**
+--   [nomain] MenuSets/**
