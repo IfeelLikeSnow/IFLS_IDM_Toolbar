@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="IFLS_IDM_Toolbar">
   <category name="IFLS_IDM_Toolbar">
-    <reapack name="IFLS_IDM_Toolbar_Core" type="script" desc="Installs IFLS IDM Toolbar core scripts, hubs and assets.">
-      <version name="1.0.0" author="IFLS" time="2026-01-03T17:37:50Z">
+    <reapack name="IFLS_IDM_Toolbar_Core" type="script" desc="Installs IFLS IDM Toolbar (Hubs + core assets).">
+      <metadata>
+        <description><![CDATA[
+IFLS_IDM_Toolbar_Core installs:
+- Hubs (main actions) under Scripts/IFLS_IDM_Toolbar/Hubs/
+- Installers (builder/rebuild) under Scripts/IFLS_IDM_Toolbar/DF95/Installers/
+- Core/Domain/DF95 assets (nomain)
+After install:
+1) Run "DF95: Build IFLS Main Toolbar MenuSet"
+2) Import MenuSet into: Options > Customize menus/toolbars... > Floating toolbar 1
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="IFLS" time="2026-01-03T18:42:44Z">
       <source file=".gitattributes">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/.gitattributes</source>
-      <source file=".reapack-index.conf">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/.reapack-index.conf</source>
       <source file="_selectors/Scripts/IfeelLikeSnow/DF95/DF95_ColoringBus_Selector.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/_selectors/Scripts/IfeelLikeSnow/DF95/DF95_ColoringBus_Selector.lua</source>
       <source file="_selectors/Scripts/IfeelLikeSnow/DF95/DF95_Common_RfxChainLoader.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/_selectors/Scripts/IfeelLikeSnow/DF95/DF95_Common_RfxChainLoader.lua</source>
       <source file="_selectors/Scripts/IfeelLikeSnow/DF95/DF95_FXBus_Selector.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/_selectors/Scripts/IfeelLikeSnow/DF95/DF95_FXBus_Selector.lua</source>
@@ -583,6 +593,7 @@
       <source file="Icons/DF95_qa.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Icons/DF95_qa.png</source>
       <source file="Icons/DF95_slice.png">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Icons/DF95_slice.png</source>
       <source file="IFLS_IDM_Toolbar/.gitattributes">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/IFLS_IDM_Toolbar/.gitattributes</source>
+      <source file="index.xml">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/index.xml</source>
       <source file="INDEX_GENERATION.md">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/INDEX_GENERATION.md</source>
       <source file="Legacy/.keep">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Legacy/.keep</source>
       <source file="Menus/DF95_AI_Toolbar.ReaperMenuSet">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Menus/DF95_AI_Toolbar.ReaperMenuSet</source>
@@ -1464,9 +1475,9 @@
       <source file="Scripts/IFLS/MicFX/SOMA Ether V2.fxlist">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/MicFX/SOMA%20Ether%20V2.fxlist</source>
       <source file="Scripts/IFLS/MicFX/TG-V35S.fxlist">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/MicFX/TG-V35S.fxlist</source>
       <source file="Scripts/IFLS/MicFX/XM8500.fxlist">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS/MicFX/XM8500.fxlist</source>
-      <source main="main" file="Scripts/IFLS_Build_FXParamIndex_AllInOne.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
+      <source file="Scripts/IFLS_Build_FXParamIndex_AllInOne.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Build_FXParamIndex_AllInOne.lua</source>
       <source file="Scripts/IFLS_Diagnostics.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_Diagnostics.lua</source>
-      <source main="main" file="Scripts/IFLS_FXParamIndex.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
+      <source file="Scripts/IFLS_FXParamIndex.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_FXParamIndex.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Core/IFLS_Contracts.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Core/IFLS_Contracts.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Core/IFLS_ExtState.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Core/IFLS_ExtState.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Core/IFLS_ImGui_Core.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Core/IFLS_ImGui_Core.lua</source>
@@ -2179,7 +2190,6 @@
       <source file="Scripts/IFLS_IDM_Toolbar/MicFX/XM8500.fxlist">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/MicFX/XM8500.fxlist</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Setup/IFLS_Install_Toolbars.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Setup/IFLS_Install_Toolbars.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Setup/IFLS_QuickStart_SelfCheck.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Setup/IFLS_QuickStart_SelfCheck.lua</source>
-      <source main="main" file="Scripts/IFLS_IDM_Toolbar/Tools/IFLS_Check_Hubs_Installed.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Tools/IFLS_Check_Hubs_Installed.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Tools/IFLS_GeneratePattern_FromArtist.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Tools/IFLS_GeneratePattern_FromArtist.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Tools/IFLS_Modulate_Slices_OnSelectedTrack.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Tools/IFLS_Modulate_Slices_OnSelectedTrack.lua</source>
       <source file="Scripts/IFLS_IDM_Toolbar/Tools/IFLS_OpenMasterHub.lua">https://raw.githubusercontent.com/IfeelLikeSnow/IFLS_IDM_Toolbar/main/Scripts/IFLS_IDM_Toolbar/Tools/IFLS_OpenMasterHub.lua</source>
